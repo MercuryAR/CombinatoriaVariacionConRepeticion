@@ -103,5 +103,4 @@ Este programa resuelve una combinatoria de variación con repetición cuya fórm
 ## 📂 Estructura del Proyecto
 * `tp_combinatoria.py`: Script principal interactivo en Python. Contiene las validaciones de entrada, la función de cálculo `resolver(m, n)` y la interfaz de consola.
 * `README.md`: Este archivo, con la documentación e instrucciones de uso.
-* `Informe_TP_Combinatoria_Tema6.docx` / `.pdf`: Informe completo del trabajo práctico.
 * `PRD_Programa_de_Combinatoria.pdf`: Documento de requisitos del producto.
