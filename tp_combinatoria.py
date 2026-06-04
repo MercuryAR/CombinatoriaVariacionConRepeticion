@@ -1,3 +1,6 @@
+# math se importa para usar log10, que permite calcular la cantidad de dígitos del resultado sin convertirlo a texto.
+import math
+
 print("Bienvenidos al TP de Combinatoria - Caso 6")
 print("Alumnos Paulo Orsini y Luis Troche")
 print("Comisión 9 - Año 2026")
@@ -55,5 +58,13 @@ n = input_validado(
 
 resultado = resolver(m, n)
 print()
-print(f"La cantidad de claves posibles es: {resultado}")
+# Calculamos la cantidad de dígitos del resultado usando logaritmo en base 10 antes de intentar mostrarlo.
+# Esto evita un error de Python que ocurre al convertir a texto enteros con más de 4300 dígitos.
+digitos = int(n * math.log10(m)) + 1
+if digitos > 4300:
+    # Si el resultado es demasiado grande, se muestra en notación aproximada en lugar del número completo.
+    print(f"La cantidad de claves posibles es: aproximadamente 10^{digitos} (resultado demasiado grande para mostrar completo)")
+else:
+    # Si el resultado está dentro del límite, se muestra el número exacto completo.
+    print(f"La cantidad de claves posibles es: {resultado}")
 print("Este programa resuelve una combinatoria de variación con repetición cuya fórmula es: VR(m, n) = m^n")
